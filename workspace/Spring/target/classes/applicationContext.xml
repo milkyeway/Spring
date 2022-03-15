@@ -35,4 +35,7 @@
 		<constructor-arg ref="date1"></constructor-arg>
 	</bean>
 
+	<bean id="car3" class="tw.jerry.demo.model.Car" p:carId="1002"
+		p:name="911" p:brand="Porsche" p:releaseDate-ref="date1" />
+
 </beans>

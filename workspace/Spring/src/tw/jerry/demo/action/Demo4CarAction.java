@@ -19,8 +19,14 @@ public class Demo4CarAction {
 		Car car2 = (Car) context.getBean("car2");
 		
 		System.out.println("car2 release Date: " + car2.getReleaseDate());
+		System.out.println("=========================");
+		System.out.println("car3:");
 		
-		context.close();
+		Car car3 = (Car) context.getBean("car3");
+		System.out.println(car3.getCarId());
+		System.out.println(car3.getName());
+		System.out.println(car3.getBrand());
+		System.out.println(car3.getReleaseDate());
 		
 		context.close();
 	}
