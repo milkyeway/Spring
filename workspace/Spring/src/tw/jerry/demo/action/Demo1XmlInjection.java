@@ -15,6 +15,9 @@ public class Demo1XmlInjection {
 //		Teacher teacher2 = context.getBean("teacher1", Teacher.class);
 		teacher.teach(" 授課");
 		
+		String str1 = (String) context.getBean("string0");
+		System.out.println("str1:" + str1);
+		
         ((ConfigurableApplicationContext)context).close();
 
 	}

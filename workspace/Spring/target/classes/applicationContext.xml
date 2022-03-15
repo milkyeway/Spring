@@ -10,4 +10,11 @@
 
 	<bean id="teacher1" class="tw.jerry.demo.model.EnglishTeacher"></bean>
 
+	<!-- String string0 = new String("Information"); -->
+	<bean id="string0" name="string1, string2"
+		class="java.lang.String">
+		<constructor-arg value="Information"></constructor-arg>
+	</bean>
+	<bean id="loginDao" class="tw.jerry.demo.model.LoginDao"></bean>
+
 </beans>
