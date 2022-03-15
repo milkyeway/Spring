@@ -8,6 +8,7 @@ Latest STS3 Downloads
 full distribution on Eclipse 4.20
 https://github.com/spring-projects/toolsuite-distribution/wiki/Spring-Tool-Suite-3
 
+eclipse-jee-2021-06-R-win32-x86_64
 --> http://download.springsource.com/release/TOOLS/update/3.9.18.RELEASE/e4.20/springsource-tool-suite-3.9.18.RELEASE-e4.20.0-updatesite.zip
 
 雲端
