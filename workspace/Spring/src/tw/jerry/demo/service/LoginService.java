@@ -1,4 +1,4 @@
-package tw.jerry.demo.Service;
+package tw.jerry.demo.service;
 
 import tw.jerry.demo.model.LoginDao;
 

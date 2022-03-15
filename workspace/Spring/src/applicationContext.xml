@@ -17,4 +17,10 @@
 	</bean>
 	<bean id="loginDao" class="tw.jerry.demo.model.LoginDao"></bean>
 
+	<!-- constructor injection -->
+	<!-- LoginService loginService = new LoginService(loginDao); -->
+	<bean id="loginService" class="tw.jerry.demo.service.LoginService">
+		<constructor-arg ref="loginDao"></constructor-arg>
+	</bean>
+
 </beans>
