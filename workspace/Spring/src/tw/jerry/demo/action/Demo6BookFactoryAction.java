@@ -12,11 +12,11 @@ public class Demo6BookFactoryAction {
 		Book book3 = context.getBean("marketBook", Book.class);
 
 		System.out.println("book3 id: " + book3.getBookid());
-		System.out.println("book3 title" + book3.getBooktitle());
+		System.out.println("book3 title " + book3.getBooktitle());
 
 		Book book4 = context.getBean("tcpBook", Book.class);
 		System.out.println("book4 id: " + book4.getBookid());
-		System.out.println("book4 title" + book4.getBooktitle());
+		System.out.println("book4 title " + book4.getBooktitle());
 
 		context.close();
 
