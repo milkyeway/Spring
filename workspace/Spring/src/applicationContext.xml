@@ -9,7 +9,8 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="tw.jerry.demo.model" />
+	<context:component-scan
+		base-package="tw.jerry.demo.model" />
 
 	<bean id="teacher1" class="tw.jerry.demo.model.EnglishTeacher"></bean>
 
@@ -75,6 +76,13 @@
 	<bean id="tcpBook" factory-bean="bookBeanFactory"
 		factory-method="getBook">
 		<constructor-arg value="4"></constructor-arg>
+	</bean>
+
+	<bean id="props"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location">
+			<value>classpath:light.properties</value>
+		</property>
 	</bean>
 
 </beans>
