@@ -38,4 +38,40 @@
 	<bean id="car3" class="tw.jerry.demo.model.Car" p:carId="1002"
 		p:name="911" p:brand="Porsche" p:releaseDate-ref="date1" />
 
+	<bean id="javaBook"
+		class="tw.jerry.demo.model.BookBeanStaticFactory"
+		factory-method="getBook">
+		<constructor-arg value="1"></constructor-arg>
+	</bean>
+
+	<bean id="bookBeanFactory"
+		class="tw.jerry.demo.model.BookBeanFactory">
+		<property name="bookmap">
+			<map>
+				<entry key="3">
+					<bean class="tw.jerry.demo.model.Book">
+						<property name="bookid" value="3"></property>
+						<property name="booktitle" value="掌握市場週期"></property>
+					</bean>
+				</entry>
+				<entry key="4">
+					<bean class="tw.jerry.demo.model.Book">
+						<property name="bookid" value="4"></property>
+						<property name="booktitle" value="TCP IP 說明書"></property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="marketBook" factory-bean="bookBeanFactory"
+		factory-method="getBook">
+		<constructor-arg value="3"></constructor-arg>
+	</bean>
+
+	<bean id="tcpBook" factory-bean="bookBeanFactory"
+		factory-method="getBook">
+		<constructor-arg value="4"></constructor-arg>
+	</bean>
+
 </beans>
