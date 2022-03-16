@@ -10,7 +10,7 @@
 
 	<context:annotation-config />
 	<context:component-scan
-		base-package="tw.jerry.demo.model" />
+		base-package="tw.jerry.demo.model,tw.jerry.demo.config" />
 
 	<bean id="teacher1" class="tw.jerry.demo.model.EnglishTeacher"></bean>
 
