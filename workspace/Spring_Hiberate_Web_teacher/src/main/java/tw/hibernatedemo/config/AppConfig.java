@@ -4,7 +4,9 @@ import java.util.Properties;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -19,6 +21,13 @@ public class AppConfig {
 		sessionFactory.setHibernateProperties(hibernateProperties());
 		sessionFactory.setPackagesToScan("tw.hibernatedemo.model");
 		return sessionFactory;
+	}
+
+	@Bean
+	public HibernateTransactionManager transactionManager() {
+		HibernateTransactionManager txManager = new HibernateTransactionManager();
+		txManager.setSessionFactory(sessionFactory().getObject());
+		return txManager;
 	}
 
 	public HikariDataSource datasource() {
